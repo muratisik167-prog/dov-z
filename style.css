@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Çok koyu lacivert/siyah */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #38bdf8; /* Açık mavi */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.last-update {
+    font-size: 14px;
+    color: #94a3b8;
+    background: #1e293b;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+/* --- GRID YAPISI --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive */
+    gap: 20px;
+}
+
+/* --- KART TASARIMI --- */
+.card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #334155;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+    border-color: #38bdf8;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.currency-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.currency-info p {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.rate {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.trend {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #22c55e; /* Yeşil (Pozitif algısı için) */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
